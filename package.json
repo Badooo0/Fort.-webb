@@ -1,0 +1,29 @@
+{
+  "name": "slutprojekt",
+  "version": "1.0.0",
+  "description": "Gymnasiearbete - Benjamin",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Badooo0/Gymnasiearbete.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Badooo0/Gymnasiearbete/issues"
+  },
+  "homepage": "https://github.com/Badooo0/Gymnasiearbete#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "js": "^0.1.0",
+    "multer": "^2.1.1"
+  }
+}
