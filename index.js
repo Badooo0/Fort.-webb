@@ -108,7 +108,7 @@ app.post("/api/login", async (req, res) => {
     const user = req.body
     const konton = await getData("konton.json");
 
-    const konto = konton.find(k => k.email == user.email);
+    const konto = konton.find(k => k.email === user.email);
 
     if(!konto){
         return res.status(401).json({error:"hittade inte kontot"})
@@ -140,7 +140,8 @@ app.post("/api/register", async (req, res) => {
         email: req.body.email,
         password: await bcrypt.hash(req.body.password, 12),
         role: "normal_bum",
-        picture: null
+        picture: null,
+        spins: 0
     }
     
     const kontodup = konton.find(k=> k.email == konto.email)
@@ -172,4 +173,32 @@ app.get("/api/status", (req, res) => {
     res.json({
         user: req.session.user
     })
+})
+
+
+app.get("/api/slots", dingus, async (req, res) => {
+
+    const konton = await getData("konton.json")
+    const konto = konton.find(k => k.email === req.session.user.email)
+
+    res.json({
+        spins: konto.spins
+    })
+})
+
+app.post("/api/slots", dingus, async (req, res) => {
+    const konton = await getData("konton.json")
+    const konto = konton.find(k => k.email === req.session.user.email)
+
+    if(konto.spins <= 0){
+        return res.status(400).json({error: "No spins left"})
+    }
+
+    konto.spins -= 1
+
+    await saveData("konton.json", konton)
+
+    console.log("new spins: ", konto.spins)
+
+    res.json({spins: konto.spins})
 })

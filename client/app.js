@@ -12,21 +12,98 @@ function Header({user}){
                         <a href="#login">Login</a>
                         <a href="#register">Register</a>
                     </div>
-                ) : (   
-                    <div>
-                        <a href="#profile">
-                            {user.profilePic 
-                                ? (<img src={user.profilePic}></img>)
-                                : (<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ0AAACUCAMAAAC+99ssAAAAMFBMVEXk5ueutLfn6eqrsbTh4+TIzM68wcPLz9HV2NqorrLc3+C1ur3Fycuyt7rZ3N24vb+gAap/AAAELUlEQVR4nO2b25arIAyGJSAHAXn/t91ox2611iIk4IX/1ay56bdCDmCSrnv06NGjR48ePXrUVACtCY4UoYQYtYrSgxDzP24igEG54I3hk4wxLDg13AMQRB8852ytCOmtEq35oNNyR/Yf0Ujd0oAAOnxjm/mY1M3wYAwnaH+AYWjEp87s9t9+fYs0M9gEtkbmA53INpuvsvdBnw438amqeO4SXMRz9fDgKlzE62vhZcDVsx6oDLhavnclWreqEblDJluUoKf7Xb2+iUtq411MdDu8nhiu4Fyj/ECLJwtMR3622fG64I2EeODL4BiThHB5eXhjPE2HJ0vhKD2v1OsmGaqUnFX9P4xHdRsABDjGLI3x8sv/VjSXASiPiUncUcB1ojjZveRJ6EYcOJqoRUjFL5FcklHyyUxHklMsDlx0PAo6LDjmCRxPGDQ8gjvoiEdHkI+RKgUNHVpCIUkpRY+xHR3+N5WH7qH7TUcQFXgxywiuAfrW2RixVhB8ELh3nUW8oxDAFX5+WilQ3O9ufTdGSymG5EE7IL0YOQFbh/Ww4DSf8JAeZVyR0HUDSsbzIw1d+XfZSZYGbmq1l8PRtcswopYoYjuUuKDs05bfBCi7PcXGo+0hi1LbEbIVvy4McX8b8tuzZEVsRVd0gScqEyvlp+Qqcwu5d2T6xvusvIrBQ4WhhS63oPlag5ZZkUHZ1d4ILjdWOKs5g3cRj/tqlpslUicXZ7hQe7hXuGTniyWi+uQnKJZmPspBhRM8kZKXuWw0sg2d9j/4jG9iuAVQhe/ny5lVbVcaQGhpDuOD87Zj7gtgp4Of1gL4ghX/8pLoyX9d8fhG5WSw3ntrg3RqFPfaUplhxKTuZgs0cKTWUN0f17TQ0zu5klNaD11DxvjDYojeZqdFHsO3ywyv9R7jpdOjELUhAQbtpGX8x4bFFL42xCCpBTjZTDvPf4FtsjJnQQ2CPPvF1NFLbnLm3I11mjTPgOin07yOttjQS6oXbXS1kGO0rQzrR/wThsHtV9qyLSg16gHHUm/LzbYC5ArtETRVeUS0Fx/rUS6lCVfMPD6OwAcarbX4wcf6wvgQMvFpk8dnCxp6IBRmLBzJyNzwgAE9GD7Fcwcs8AZQzvky1hzTHqs4eP6y99GkkW98F7sYCm+8IwlPXvguCtVO9Y3nk52vnsut+VKdr0IiOVISHtaw/WWltDME2kg2BV4ry814vw63kc8tOsWrn0r2Osl70NdNwgf6vpMEujXbWVErbqtj6Fvgtne6lw5rGubIbpEO2/PNasReR2eLtlSEoI+4hfE+cActepw1QCTtx5EQ92LKtTceXGm30mu3TIgzNImmbcVAWj7F02YQ7ja5btHmpneXMvEWX8/C36TCrrSOi9vBrcoZIC7FoOl9tHcqsW+911ih3SPxREvU3i6fTJod7x97Tzo/INpCAAAAAABJRU5ErkJggg=="></img>)
-                            }
-                        </a>
-                    </div>
+                ) : (
+                    <>
+                        <a href="#slots">väldigt fint ställer right</a>
+                        <div>
+                            <a href="#profile">
+                                {user.profilePic 
+                                    ? (<img src={user.profilePic}></img>)
+                                    : (<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ0AAACUCAMAAAC+99ssAAAAMFBMVEXk5ueutLfn6eqrsbTh4+TIzM68wcPLz9HV2NqorrLc3+C1ur3Fycuyt7rZ3N24vb+gAap/AAAELUlEQVR4nO2b25arIAyGJSAHAXn/t91ox2611iIk4IX/1ay56bdCDmCSrnv06NGjR48ePXrUVACtCY4UoYQYtYrSgxDzP24igEG54I3hk4wxLDg13AMQRB8852ytCOmtEq35oNNyR/Yf0Ujd0oAAOnxjm/mY1M3wYAwnaH+AYWjEp87s9t9+fYs0M9gEtkbmA53INpuvsvdBnw438amqeO4SXMRz9fDgKlzE62vhZcDVsx6oDLhavnclWreqEblDJluUoKf7Xb2+iUtq411MdDu8nhiu4Fyj/ECLJwtMR3622fG64I2EeODL4BiThHB5eXhjPE2HJ0vhKD2v1OsmGaqUnFX9P4xHdRsABDjGLI3x8sv/VjSXASiPiUncUcB1ojjZveRJ6EYcOJqoRUjFL5FcklHyyUxHklMsDlx0PAo6LDjmCRxPGDQ8gjvoiEdHkI+RKgUNHVpCIUkpRY+xHR3+N5WH7qH7TUcQFXgxywiuAfrW2RixVhB8ELh3nUW8oxDAFX5+WilQ3O9ufTdGSymG5EE7IL0YOQFbh/Ww4DSf8JAeZVyR0HUDSsbzIw1d+XfZSZYGbmq1l8PRtcswopYoYjuUuKDs05bfBCi7PcXGo+0hi1LbEbIVvy4McX8b8tuzZEVsRVd0gScqEyvlp+Qqcwu5d2T6xvusvIrBQ4WhhS63oPlag5ZZkUHZ1d4ILjdWOKs5g3cRj/tqlpslUicXZ7hQe7hXuGTniyWi+uQnKJZmPspBhRM8kZKXuWw0sg2d9j/4jG9iuAVQhe/ny5lVbVcaQGhpDuOD87Zj7gtgp4Of1gL4ghX/8pLoyX9d8fhG5WSw3ntrg3RqFPfaUplhxKTuZgs0cKTWUN0f17TQ0zu5klNaD11DxvjDYojeZqdFHsO3ywyv9R7jpdOjELUhAQbtpGX8x4bFFL42xCCpBTjZTDvPf4FtsjJnQQ2CPPvF1NFLbnLm3I11mjTPgOin07yOttjQS6oXbXS1kGO0rQzrR/wThsHtV9qyLSg16gHHUm/LzbYC5ArtETRVeUS0Fx/rUS6lCVfMPD6OwAcarbX4wcf6wvgQMvFpk8dnCxp6IBRmLBzJyNzwgAE9GD7Fcwcs8AZQzvky1hzTHqs4eP6y99GkkW98F7sYCm+8IwlPXvguCtVO9Y3nk52vnsut+VKdr0IiOVISHtaw/WWltDME2kg2BV4ry814vw63kc8tOsWrn0r2Osl70NdNwgf6vpMEujXbWVErbqtj6Fvgtne6lw5rGubIbpEO2/PNasReR2eLtlSEoI+4hfE+cActepw1QCTtx5EQ92LKtTceXGm30mu3TIgzNImmbcVAWj7F02YQ7ja5btHmpneXMvEWX8/C36TCrrSOi9vBrcoZIC7FoOl9tHcqsW+911ih3SPxREvU3i6fTJod7x97Tzo/INpCAAAAAABJRU5ErkJggg=="></img>)
+                                }
+                            </a>
+                        </div>
+                    </>   
                 )
             }
                 
         </nav>
     );
 };
+
+
+
+function Slots({user}) {
+    const [spins, setSpins] = React.useState(0);
+    
+    const symbols = ["7️⃣", "🍌", "🍉", "🍋", "🔔", "🍊", "🍇", "🍒"];
+    
+    const [result, setResult] = React.useState(["7️⃣", "7️⃣", "7️⃣"]);
+
+    const [win, setWin] = React.useState(false);
+    const [jackpot, setJackpot] = React.useState(false);
+
+    React.useEffect(() => {
+        user ? checkspin() : setSpins(0)
+    }, [user]);
+
+    async function checkspin(){
+        const res = await fetch("/api/slots", {
+            credentials: "same-origin"
+        });
+
+        const spinObject = await res.json();
+        setSpins(spinObject.spins);
+    };
+    
+
+    async function spin(){
+        const res = await fetch("/api/slots", {
+            method: "POST",
+            headers: {"content-type": "application/json"},
+            credentials: "same-origin"
+        });
+
+        const count = await res.json();
+        setSpins(count.spins);
+
+        const nyResultat = [
+            symbols[Math.floor(Math.random()*symbols.length)],
+            symbols[Math.floor(Math.random()*symbols.length)],
+            symbols[Math.floor(Math.random()*symbols.length)]
+        ];
+        setResult(nyResultat);
+
+        ((nyResultat[0] === symbols[0] && nyResultat[1] === symbols[0] && nyResultat[2] === symbols[0]) ? setJackpot(true) : setJackpot(false))
+
+        (((nyResultat[1] === nyResultat[2] && nyResultat[1] === nyResultat[0]) && jackpot === false) ? setWin(true) : setWin(false));
+
+    }
+
+    return (
+        <div id="slots" className="content">
+           
+            <h2>Slots</h2>
+
+            {jackpot && <h3 style={{color: "#ff00ff"}}>💎 JACKPOT!!! 💎</h3>}
+            {win && !jackpot && <h3 style={{color: "#00ff88"}}>You won!</h3>}
+
+            <div className="slot-machine">
+                <div className="lanes">
+                    <div className="lane" >{result[0]}</div>
+                    <div className="lane" >{result[1]}</div>
+                    <div className="lane" >{result[2]}</div>
+                </div>
+
+                <div className="lever" onClick={spin}></div>
+            </div>
+
+            <h4>spins left: {spins}</h4>
+        </div>
+    );
+}
+
+
 
 function Profile({user, katter, setKatter, logout, raser}){
 
@@ -61,7 +138,7 @@ function Upload({setKatter, raser}){
         const res = await fetch("/api/katter", {
             method: "POST",
             body: katt,
-            credentials: "include"
+            credentials: "same-origin"
         })
 
         const nyKatt = await res.json()
@@ -104,7 +181,7 @@ function Katter({setKatter, katter, raser, user}){
 
     async function getKatter(){
         const res = await fetch("/api/katter", {
-            credentials: "include"
+            credentials: "same-origin"
         })
         const katter = await res.json()
         setKatter(katter)
@@ -127,7 +204,7 @@ function Katt({katt, setKatter, raser, user, editable}){
     async function delKatt(){
         const res = await fetch("/api/katter/" + katt.id, {
             method:"DELETE",
-            credentials: "include"
+            credentials: "same-origin"
         });
 
         res.ok ? (
@@ -149,7 +226,7 @@ function Katt({katt, setKatter, raser, user, editable}){
             method: "PATCH",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(updatedKatt),
-            credentials: "include"
+            credentials: "same-origin"
         })
 
         const nyaKatter = await res.json();
@@ -213,7 +290,7 @@ function Login({setUser, user}){
         const res = await fetch("/api/login", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
-            credentials: "include", //skickas cookies
+            credentials: "same-origin", //skickas cookies
             body: JSON.stringify(konto)
         })
 
@@ -254,7 +331,7 @@ function Register(){
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(konto), 
-            credentials: "include"
+            credentials: "same-origin"
         })
 
     }
@@ -331,11 +408,11 @@ function App(){
 
     React.useEffect(() => {
         checkLogin();
-    }, [user]);
+    }, []);
 
     async function checkLogin(){
         const res = await fetch("/api/status", {
-            credentials: "include"
+            credentials: "same-origin"
         })
 
         const cookie = await res.json()
@@ -348,7 +425,7 @@ function App(){
     async function logout(){
         await fetch("/api/logout", {
             method: "POST",
-            credentials: "include"
+            credentials: "same-origin"
         })
 
         setUser(null)
@@ -364,6 +441,7 @@ function App(){
             <Upload setKatter={setKatter} raser={raser}/>
             <Login setUser={setUser} user={user}/>
             <Register />
+            <Slots user={user}/>
         </div>
     );
 };
