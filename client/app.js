@@ -14,7 +14,7 @@ function Header({user}){
                     </div>
                 ) : (
                     <>
-                        <a href="#slots">väldigt fint ställer right</a>
+                        <a href="#slots">Slots</a>
                         <div>
                             <a href="#profile">
                                 {user.profilePic 
